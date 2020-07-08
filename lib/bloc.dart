@@ -5,7 +5,11 @@ class Bloc with ChangeNotifier {
   Map<int,int> get cart => _cart;
 
   void addItemToCart(index) {
-    _cart[index]++;
+    if(_cart.containsKey(index)) {
+      _cart[index]++;
+    } else {
+      _cart[index] = 1;
+    }
     notifyListeners();
   }
 

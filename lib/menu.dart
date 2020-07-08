@@ -34,7 +34,10 @@ class _MenuState extends State<Menu> {
                 );
               },
               child: Container(
-                child: Text('Count: $count'),
+                alignment: Alignment.center,
+                child: Text('Count: $count',
+                    style: Theme.of(context).textTheme.headline4,
+                ),
               ),
             ),
           )
@@ -48,7 +51,16 @@ class _MenuState extends State<Menu> {
               bloc.addItemToCart(index);
             },
             child: Container(
-
+              child: Text('Item: $index'),
+              height: 200,
+              width: 200,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage('https://api.time.com/wp-content/uploads/2020/04/Boss-Turns-Into-Potato.jpg'),
+                  fit: BoxFit.fitWidth,
+                ),
+                borderRadius: BorderRadius.circular(12),
+              ),
             ),
           );
         }),

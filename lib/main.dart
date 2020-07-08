@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           title: 'BLoC Provider Test',
           theme: ThemeData(
-            primarySwatch: Colors.black,
           ),
           home: Menu(title: 'BLoC Provider'),
         ));
